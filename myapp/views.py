@@ -28,6 +28,9 @@ def projects(request):
 
 """def task(request, title):
     task = Task.objects.get(title = title)"""
-def task(request):
+def tasks(request):
     #task = get_object_or_404(Task, id = id)
-    return render(request, 'task.html')
+    tasks = Task.objects.all()
+    return render(request, 'tasks.html', {
+        'tasks': tasks
+    })
