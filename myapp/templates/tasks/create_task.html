@@ -2,14 +2,13 @@
 
 {% block content %}
 
-<h1>Create a new task</h1>
+    <h1>Create a new task</h1>
 
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button>
-        Save
-    </button>
-</form>
+    <form method="POST">
+        {% csrf_token %}
+
+        {{ form }}
+        <button>Save</button>
+    </form>
 
 {% endblock %}
